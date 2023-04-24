@@ -34,7 +34,7 @@ h6 {
 }
 
 .custom-table {
-  min-width: 1000px; }
+  min-width: 500; }
   .custom-table thead tr, .custom-table thead th {
     border-top: none;
     border-bottom: none !important; }
