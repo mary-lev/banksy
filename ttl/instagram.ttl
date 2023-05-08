@@ -12,7 +12,7 @@ bnksy:InstagramPage
   rdf:type schema:WebPage ;
   dcterms:type "Social media platform" ;
   dcterms:created "2013-10-01"^^xsd:date ;
-  schema:hasPart bnksy:InstagramPost ;
+  crm:P65_shows_visual_item bnksy:Mural ;
   dcterms:creator bnksy:Banksy ;
   schema:url <https://www.instagram.com/banksy/> .
 
@@ -21,11 +21,6 @@ bnksy:Banksy
   rdfs:label	"Banksy" ;
   crm:P131_is_identified_by	bnksy:BanksyName ;
   owl:sameAs viaf:51384525 .
-
-bnksy:InstagramPost
-  rdf:type schema:SocialMediaPosting ;
-  schema:mainEntityOfPage bnksy:Mural ;
-  schema:url <https://www.instagram.com/p/BpDMo26h3Cu/> .
 
 bnksy:Mural
   rdfs:label	bnksy:GirlWithBalloonTitle1, bnksy:GirlWithBalloonTitle2 ;
