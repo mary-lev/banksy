@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <http://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix kml: <http://www.opengis.net/kml/2.2#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix viaf: <http://viaf.org/viaf/>.
+@prefix bnksy: <https://w3id.org/banskyproject/> .
+
+bnksy:Map
+  rdf:type schema:WebPage ;
+  dcterms:isPartOf bnksy:GoogleMaps ;
+  schema:category "Web page" ;
+  kml:TimeStamp "2023-04-11"^^xsd:date ;
+  dcterms:about bnksy:Banksy .
+
+bnksy:GoogleMaps
+  rdf:type schema:WebSite ;
+  rdfs:label "Google maps" .
+
+bnksy:Banksy
+  rdf:type crm:E39_Actor ;
+  rdfs:label	"Banksy" ;
+  crm:P131_is_identified_by	bnksy:BanksyName ;
+  owl:sameAs viaf:51384525 .

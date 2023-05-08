@@ -1,0 +1,10 @@
+Subject,Predicate,Object
+Article,rdf:type,crm: E31 Document
+Article,Schema:category        ,Article
+Article,Schema:datePublished,"May 7, 2007"
+Article,Schema:Publisher,The New Yorker
+Article,Schema:Language,English
+Article,Schema:Author,Lauren Collins
+Article,Schema:About,Anonymity and criticism
+Article,Schema:About,Banksy
+Article,Schema: About,bnksy:Girl with Balloon

@@ -1,0 +1,322 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix schema: <http://schema.org/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix aat: <http://vocab.getty.edu/page/aat/> .
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix viaf: <http://viaf.org/viaf/>.
+@prefix kml: <http://www.opengis.net/kml/2.2#> .
+@prefix bnksy: <https://w3id.org/banskyproject/> .
+
+bnksy:Mural
+  rdfs:label	bnksy:GirlWithBalloonTitle1, bnksy:GirlWithBalloonTitle2 ;
+  rdf:type	crm:E22_Man-Made_Object ;
+  crm:P53_has_former_or_current_location	bnksy:MuralLocation ;
+  crm:P129_is_about	bnksy:MuralTopic ;
+  crm:P14_carried_out_by bnksy:Banksy ;
+  crm:P108i_was_produced_by	bnksy:MuralProduction .
+
+bnksy:MuralLocation
+  rdf:type	crm:E53_Place ;
+  geo:lat	51.5086 ;
+  geo:long	-0.1169 ;
+  crm:P87_is_identified_by	bnksy:MuralLocationName, bnksy:MuralLocationAddress .
+
+bnksy:MuralProduction
+  rdf:type	crm:E12_Production ;
+  crm:P14_carried_out_by	bnksy:Banksy ;
+  crm:P33_used_specific_technique	bnksy:StencilStreetArt ;
+  crm:P4_has_time-span	bnksy:MuralTimeSpan ;
+  crm:P32_used_general_technique	aat:300056477 .
+
+bnksy:StencilStreetArt
+  rdf:type	crm:E29_Design_or_Procedure ;
+  rdfs:label	"Stencil Street Art" .
+
+bnksy:Banksy
+  rdf:type crm:E39_Actor ;
+  rdfs:label	"Banksy" ;
+  crm:P131_is_identified_by	bnksy:BanksyName ;
+  owl:sameAs viaf:51384525 .
+
+bnksy:BanksyName
+  rdf:type	crm:E82_Actor_Appellation ;
+  rdfs:label	"Banksy" ;
+  crm:P2_has_type	bnksy:BanksyNameType .
+
+bnksy:MuralLocationName
+  rdf:type	crm:E44_Place_Appellation ;
+  rdfs:label	"Waterloo Bridge" .
+
+bnksy:MuralLocationAddress
+  rdf:type	crm:E45_Address ;
+  rdf:label	"London, UK" .
+
+bnksy:MuralTimeSpan
+  rdf:type	crm:E52_Time-Span ;
+  crm:P82a_begin_of_the_begin	"2002"^^xsd:gYear ;
+  crm:P82b_end_of_the_end	"2008"^^xsd:gYear .
+
+bnksy:GirlWithBalloonTitle1
+  rdf:type	crm:E35_Title ;
+  rdfs:label	"Girl with Balloon" .
+
+bnksy:GirlWithBalloonTitle2	
+  rdf:type	crm:E35_Title ;
+  rdfs:label	"There is Always Hope" .
+
+bnksy:MuralTopic
+  rdf:type	crm:E89_Propositional_Object ;
+  rdfs:label	"Hope" .
+
+bnksy:BanksyNameType
+  rdf:type	crm:E55_Type ;
+  rdfs:label	"Pseudonym" .
+
+bnksy:WallAndPiece
+  rdf:type bibo:Book ;
+  rdfs:label "Wall and Piece" ;
+  bibo:isbn "1844137864" ;
+  bibo:language "English" ;
+  bibo:creator bnksy:Banksy ;
+  bibo:locationCreated bnksy:UnitedKingdom ;
+  bibo:date "2005"^^xsd:gYear ;
+  bibo:publisher bnksy:Century ;
+  bibo:title "Wall and Piece" ;
+  dcterms:subject bnksy:StreetArt, bnksy:Graffiti .
+
+bnksy:StreetArt
+  rdf:type dcterms:Concept ;
+  rdfs:label "Street Art" ;
+  owl:sameAs aat:300056477 .
+
+bnksy:Graffiti
+  rdf:type dcterms:Concept ;
+  rdfs:label "Graffiti" ;
+  owl:sameAs aat:300410270 .
+
+bnksy:UnitedKingdom
+  rdf:type bibo:Place ;
+  rdfs:label "United Kingdom" ;
+  owl:sameAs dbpedia:United_Kingdom .
+
+bnksy:Century
+  rdf:type bibo:Organization ;
+  rdfs:label "Century" ;
+  owl:sameAs viaf:127849436 ;
+  bibo:imprint bnksy:RandomHouseGroup .
+
+bnksy:RandomHouseGroup
+  rdf:type bibo:Organization ;
+  rdfs:label "Random House Group" ;
+  owl:sameAs viaf:153153594 ;
+  bibo:foundingDate "1927"^^xsd:gYear ;
+  bibo:location bnksy:NewYorkUSA .
+
+bnksy:NewYorkUSA
+  rdf:type bibo:Place ;
+  rdfs:label "New York, USA" ;
+  owl:sameAs dbpedia:New_York_City .
+
+bnksy:Article
+  rdf:type crm:E31_Document ;
+  schema:category "Article" ;
+  schema:datePublished "2007-05-07"^^xsd:date ;
+  schema:publisher bnksy:TheNewYorker ;
+  schema:inLanguage "English" ;
+  schema:author bnksy:LaurenCollins ;
+  schema:about bnksy:AnonymityAndCriticism, bnksy:Banksy, bnksy:Mural .
+
+bnksy:TheNewYorker
+  rdf:type schema:Organization ;
+  rdfs:label "The New Yorker" ;
+  owl:sameAs viaf:261263929 .
+
+bnksy:LaurenCollins
+  rdf:type schema:Person ;
+  rdfs:label "Lauren Collins" .
+
+bnksy:AnonymityAndCriticism
+  rdf:type schema:Thing ;
+  rdfs:label "Anonymity and criticism" .
+
+bnksy:Exhibition
+  rdf:type crm:E5_Event ;
+  crm:P102_has_title "Jago, Banksy, TVboy e altre storie controcorrente" ;
+  crm:P7_took_place_at bnksy:ExhibitionVenue ;
+  crm:P4_has_time-span bnksy:ExhibitionTimeSpan ;
+  crm:P129_is_about bnksy:NonConventionalArt ;
+  crm:P14_carried_out_by bnksy:Artemisia, bnksy:PopHouse, bnksy:CuratorPiernicolaMariaDiIorio .
+
+bnksy:NonConventionalArt
+  rdf:type crm:E1_CRM_Entity ;
+  rdfs:label "Non-conventional art" .
+
+bnksy:Artemisia
+  rdf:type crm:E39_Actor ;
+  rdfs:label "Arthemisia" .
+
+bnksy:PopHouse
+  rdf:type crm:E39_Actor ;
+  rdfs:label "Pop House Gallery" .
+
+bnksy:CuratorPiernicolaMariaDiIorio
+  rdf:type crm:E39_Actor ;
+  rdfs:label "Piernicola Maria Di Iorio" ;
+  crm:P2_has_type bnksy:CuratorRole .
+
+bnksy:CuratorRole
+  rdf:type crm:E55_Type ;
+  rdfs:label "Curator" .
+
+bnksy:ExhibitionTimeSpan
+  rdf:type crm:E52_Time-Span ;
+  crm:P82a_begin_of_the_begin "2022-11-11"^^xsd:date ;
+  crm:P82b_end_of_the_end "2023-05-07"^^xsd:date .
+
+bnksy:ExhibitionVenue
+  rdf:type crm:E53_Place ;
+  rdfs:label "Palazzo Albergati" ;
+  crm:P87_is_identified_by bnksy:ExhibitionVenueName, bnksy:ExhibitionVenueAddress ;
+  crm:P89_falls_within bnksy:Bologna ;
+  geo:lat "44.48991"^^xsd:float ;
+  geo:long "11.33439"^^xsd:float .
+
+bnksy:ExhibitionVenueName
+  rdf:type crm:E44_Place_Appellation ;
+  rdfs:label "Palazzo Albergati" .
+
+bnksy:ExhibitionVenueAddress
+  rdf:type crm:E45_Address ;
+  rdfs:label "via Saragozza 26-28, Bologna, Italy" .
+
+bnksy:Bologna
+  rdf:type crm:E53_Place ;
+  rdfs:label "Bologna" ;
+  crm:P89_falls_within bnksy:Italy ;
+  owl:sameAs dbpedia:Bologna .
+
+bnksy:Italy
+  rdf:type crm:E53_Place ;
+  rdfs:label "Italy" ;
+  owl:sameAs dbpedia:Italy .
+
+bnksy:Biography
+  rdf:type schema:Article ;
+  dcterms:about bnksy:Banksy ;
+  dcterms:language "English" ;
+  dcterms:isPartOf bnksy:WikipediaElectronicResource ;
+  dcterms:created "2003-12-10"^^xsd:date .
+
+bnksy:WikipediaElectronicResource
+  rdf:type schema:WebSite ;
+  rdfs:label "Wikipedia (electronic resource)" ;
+  owl:sameAs viaf:220417855 .
+
+bnksy:News
+  rdf:type schema:Article ;
+  dcterms:creator bnksy:ChelseaWhite ;
+  dcterms:isPartOf bnksy:MailOnline ;
+  dcterms:created "2014-03-14"^^xsd:date ;
+  dcterms:about bnksy:JustinBieber ;
+  dcterms:about bnksy:Banksy ;
+  dcterms:language "English" .
+
+bnksy:ChelseaWhite
+  rdf:type schema:Person ;
+  rdfs:label "Chelsea White" .
+
+bnksy:MailOnline
+  rdf:type schema:WebSite ;
+  rdfs:label "MailOnline" .
+
+bnksy:JustinBieber
+  rdf:type schema:Person ;
+  schema:name "Justin Bieber" ;
+  schema:jobTitle "Singer" ;
+  schema:owns bnksy:Tattoo ;
+  owl:sameAs viaf:103075654 .
+
+bnksy:Tattoo
+  rdf:type schema:VisualArtwork ;
+  crm:P130_shows_features_of bnksy:Mural ;
+  dcterms:creator bnksy:GlenHartless ;
+  dcterms:created "2014-03-12"^^xsd:date ;
+  schema:additionalType "Controversial" .
+
+bnksy:GlenHartless
+  rdf:type schema:Person ;
+  schema:name "Glen Hartless" ;
+  schema:jobTitle "Tattooist" .
+
+bnksy:InstagramPage
+  rdf:type schema:WebPage ;
+  dcterms:type "Social media platform" ;
+  dcterms:created "2013-10-01"^^xsd:date ;
+  schema:hasPart bnksy:InstagramPost ;
+  dcterms:creator bnksy:Banksy ;
+  schema:url <https://www.instagram.com/banksy/> .
+
+bnksy:InstagramPost
+  rdf:type schema:SocialMediaPosting ;
+  schema:mainEntityOfPage bnksy:Mural ;
+  schema:url <https://www.instagram.com/p/BpDMo26h3Cu/> .
+
+bnksy:Map
+  rdf:type schema:WebPage ;
+  dcterms:isPartOf bnksy:GoogleMaps ;
+  schema:category "Web page" ;
+  kml:TimeStamp "2023-04-11"^^xsd:date ;
+  dcterms:about bnksy:Banksy .
+
+bnksy:GoogleMaps
+  rdf:type schema:WebSite ;
+  rdfs:label "Google maps" .
+
+bnksy:Documentary
+  rdf:type schema:Movie ;
+  schema:category "Documentary" ;
+  schema:dateCreated "2020"^^xsd:gYear ;
+  schema:inLanguage "English" ;
+  schema:author bnksy:ElioEspana ;
+  schema:creator bnksy:SpiritlevelCinema ;
+  schema:publisher bnksy:YouTubeChannelPerspective ;
+  schema:about bnksy:Banksy ;
+  schema:director bnksy:ElioEspana ;
+  dcterms:title "Banksy and The Rise of Outlaw Art" .
+
+bnksy:ElioEspana
+  rdf:type schema:Person ;
+  rdfs:label "Elio Espana" .
+
+bnksy:SpiritlevelCinema
+  rdf:type schema:Organization ;
+  rdfs:label "Spiritlevel Cinema" .
+
+bnksy:YouTubeChannelPerspective
+  rdf:type schema:Organization ;
+  rdfs:label "YouTube channel Perspective" .
+
+bnksy:PrivateLimitedCompany
+  rdf:type schema:Organization ;
+  schema:category "Private limited Company" ;
+  schema:dateCreated "2008-01-14"^^xsd:date ;
+  schema:locationCreated bnksy:LondonUnitedKingdom ;
+  dcterms:title "Pest Control Office" ;
+  schema:hasCredential bnksy:BanksyCopyrightManagement .
+
+bnksy:LondonUnitedKingdom
+  rdf:type schema:Place ;
+  rdfs:label "London, United Kingdom" .
+
+bnksy:BanksyCopyrightManagement
+  rdf:type schema:Credential ;
+  rdfs:label "Banksy's creative works copyright management" ;
+  schema:credentialCategory "Copyright management" ;
+  schema:validFor bnksy:Banksy ;
+  schema:heldBy bnksy:PrivateLimitedCompany .

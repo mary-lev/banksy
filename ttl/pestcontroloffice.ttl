@@ -1,0 +1,35 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <http://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix aat: <http://vocab.getty.edu/page/aat/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix viaf: <http://viaf.org/viaf/>.
+@prefix bnksy: <https://w3id.org/banskyproject/> .
+
+bnksy:PrivateLimitedCompany
+  rdf:type schema:Organization ;
+  schema:category "Private limited Company" ;
+  schema:dateCreated "2008-01-14"^^xsd:date ;
+  schema:locationCreated bnksy:LondonUnitedKingdom ;
+  dcterms:title "Pest Control Office" ;
+  schema:hasCredential bnksy:BanksyCopyrightManagement .
+
+bnksy:BanksyCopyrightManagement
+  rdf:type schema:Credential ;
+  rdfs:label "Banksy's creative works copyright management" ;
+  schema:credentialCategory "Copyright management" ;
+  schema:validFor bnksy:Banksy ;
+  schema:heldBy bnksy:PrivateLimitedCompany .
+
+bnksy:LondonUnitedKingdom
+  rdf:type schema:Place ;
+  rdfs:label "London, United Kingdom" .
+
+bnksy:Banksy
+  rdf:type crm:E39_Actor ;
+  rdfs:label	"Banksy" ;
+  crm:P131_is_identified_by	bnksy:BanksyName ;
+  owl:sameAs viaf:51384525 .

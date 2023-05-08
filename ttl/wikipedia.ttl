@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <http://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix aat: <http://vocab.getty.edu/page/aat/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix viaf: <http://viaf.org/viaf/>.
+@prefix bnksy: <https://w3id.org/banskyproject/> .
+
+bnksy:Biography
+  rdf:type schema:Article ;
+  dcterms:about bnksy:Banksy ;
+  dcterms:language "English" ;
+  dcterms:isPartOf bnksy:WikipediaElectronicResource ;
+  dcterms:created "2003-12-10"^^xsd:date .
+
+bnksy:Banksy
+  rdf:type crm:E39_Actor ;
+  rdfs:label	"Banksy" ;
+  crm:P131_is_identified_by	bnksy:BanksyName ;
+  owl:sameAs viaf:51384525 .
+
+bnksy:WikipediaElectronicResource
+  rdf:type schema:WebSite ;
+  rdfs:label "Wikipedia (electronic resource)" ;
+  owl:sameAs viaf:220417855 .

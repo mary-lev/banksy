@@ -1,0 +1,69 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix bnksy: <https://w3id.org/banskyproject/> .
+
+bnksy:Exhibition
+  rdf:type crm:E5_Event ;
+  crm:P102_has_title "Jago, Banksy, TVboy e altre storie controcorrente" ;
+  crm:P7_took_place_at bnksy:ExhibitionVenue ;
+  crm:P4_has_time-span bnksy:ExhibitionTimeSpan ;
+  crm:P129_is_about bnksy:NonConventionalArt ;
+  crm:P14_carried_out_by bnksy:Artemisia, bnksy:PopHouse, bnksy:CuratorPiernicolaMariaDiIorio .
+
+bnksy:NonConventionalArt
+  rdf:type crm:E1_CRM_Entity ;
+  rdfs:label "Non-conventional art" .
+
+bnksy:Artemisia
+  rdf:type crm:E39_Actor ;
+  rdfs:label "Arthemisia" .
+
+bnksy:PopHouse
+  rdf:type crm:E39_Actor ;
+  rdfs:label "Pop House Gallery" .
+
+bnksy:CuratorPiernicolaMariaDiIorio
+  rdf:type crm:E39_Actor ;
+  rdfs:label "Piernicola Maria Di Iorio" ;
+  crm:P2_has_type bnksy:CuratorRole .
+
+bnksy:CuratorRole
+  rdf:type crm:E55_Type ;
+  rdfs:label "Curator" .
+
+bnksy:ExhibitionTimeSpan
+  rdf:type crm:E52_Time-Span ;
+  crm:P82a_begin_of_the_begin "2022-11-11"^^xsd:date ;
+  crm:P82b_end_of_the_end "2023-05-07"^^xsd:date .
+
+bnksy:ExhibitionVenue
+  rdf:type crm:E53_Place ;
+  rdfs:label "Palazzo Albergati" ;
+  crm:P87_is_identified_by bnksy:ExhibitionVenueName, bnksy:ExhibitionVenueAddress ;
+  crm:P89_falls_within bnksy:Bologna ;
+  geo:lat "44.48991"^^xsd:float ;
+  geo:long "11.33439"^^xsd:float .
+
+bnksy:ExhibitionVenueName
+  rdf:type crm:E44_Place_Appellation ;
+  rdfs:label "Palazzo Albergati" .
+
+bnksy:ExhibitionVenueAddress
+  rdf:type crm:E45_Address ;
+  rdfs:label "via Saragozza 26-28, Bologna, Italy" .
+
+bnksy:Bologna
+  rdf:type crm:E53_Place ;
+  rdfs:label "Bologna" ;
+  crm:P89_falls_within bnksy:Italy ;
+  owl:sameAs dbpedia:Bologna .
+
+bnksy:Italy
+  rdf:type crm:E53_Place ;
+  rdfs:label "Italy" ;
+  owl:sameAs dbpedia:Italy .

@@ -1,0 +1,36 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <http://schema.org/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix viaf: <http://viaf.org/viaf/>.
+@prefix bnksy: <https://w3id.org/banskyproject/> .
+
+bnksy:InstagramPage
+  rdf:type schema:WebPage ;
+  dcterms:type "Social media platform" ;
+  dcterms:created "2013-10-01"^^xsd:date ;
+  schema:hasPart bnksy:InstagramPost ;
+  dcterms:creator bnksy:Banksy ;
+  schema:url <https://www.instagram.com/banksy/> .
+
+bnksy:Banksy
+  rdf:type crm:E39_Actor ;
+  rdfs:label	"Banksy" ;
+  crm:P131_is_identified_by	bnksy:BanksyName ;
+  owl:sameAs viaf:51384525 .
+
+bnksy:InstagramPost
+  rdf:type schema:SocialMediaPosting ;
+  schema:mainEntityOfPage bnksy:Mural ;
+  schema:url <https://www.instagram.com/p/BpDMo26h3Cu/> .
+
+bnksy:Mural
+  rdfs:label	bnksy:GirlWithBalloonTitle1, bnksy:GirlWithBalloonTitle2 ;
+  rdf:type	crm:E22_Man-Made_Object ;
+  crm:P53_has_former_or_current_location	bnksy:MuralLocation ;
+  crm:P129_is_about	bnksy:MuralTopic ;
+  crm:P14_carried_out_by bnksy:Banksy ;
+  crm:P108i_was_produced_by	bnksy:MuralProduction .

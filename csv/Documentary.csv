@@ -1,0 +1,10 @@
+Subject,Predicate,Object
+Documentary,Schema:category,Documentary
+Documentary,Schema:dateCreated,2020
+Documentary,Schema:Language,English
+Documentary,Schema:Author,Elio Espana
+Documentary,Schema:Creator,Spiritlevel Cinema
+Documentary,Schema:Publisher,YouTube channel Perspective
+Documentary,Schema:About,Banksy
+ex:Elio Espana,Rdf:label,Schema:director
+Documentary,dcterms: title,Banksy and The Rise of Outlaw Art

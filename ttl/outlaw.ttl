@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <http://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix aat: <http://vocab.getty.edu/page/aat/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix viaf: <http://viaf.org/viaf/>.
+@prefix bnksy: <https://w3id.org/banskyproject/> .
+
+bnksy:Documentary
+  rdf:type schema:Movie ;
+  schema:category "Documentary" ;
+  schema:dateCreated "2020"^^xsd:gYear ;
+  schema:inLanguage "English" ;
+  schema:author bnksy:ElioEspana ;
+  schema:creator bnksy:SpiritlevelCinema ;
+  schema:publisher bnksy:YouTubeChannelPerspective ;
+  schema:about bnksy:Banksy ;
+  schema:director bnksy:ElioEspana ;
+  dcterms:title "Banksy and The Rise of Outlaw Art" .
+
+bnksy:ElioEspana
+  rdf:type schema:Person ;
+  rdfs:label "Elio Espana" .
+
+bnksy:SpiritlevelCinema
+  rdf:type schema:Organization ;
+  rdfs:label "Spiritlevel Cinema" .
+
+bnksy:YouTubeChannelPerspective
+  rdf:type schema:Organization ;
+  rdfs:label "YouTube channel Perspective" .
+
+bnksy:Banksy
+  rdf:type crm:E39_Actor ;
+  rdfs:label	"Banksy" ;
+  crm:P131_is_identified_by	bnksy:BanksyName ;
+  owl:sameAs viaf:51384525 .

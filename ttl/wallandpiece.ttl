@@ -1,0 +1,60 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix aat: <http://vocab.getty.edu/page/aat/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix viaf: <http://viaf.org/viaf/>.
+@prefix bnksy: <https://w3id.org/banskyproject/> .
+
+bnksy:WallAndPiece
+  rdf:type bibo:Book ;
+  rdfs:label "Wall and Piece" ;
+  bibo:isbn "1844137864" ;
+  bibo:language "English" ;
+  bibo:creator bnksy:Banksy ;
+  bibo:locationCreated bnksy:UnitedKingdom ;
+  bibo:date "2005"^^xsd:gYear ;
+  bibo:publisher bnksy:Century ;
+  bibo:title "Wall and Piece" ;
+  dcterms:subject bnksy:StreetArt, bnksy:Graffiti .
+
+bnksy:StreetArt
+  rdf:type dcterms:Concept ;
+  rdfs:label "Street Art" ;
+  owl:sameAs aat:300056477 .
+
+bnksy:Graffiti
+  rdf:type dcterms:Concept ;
+  rdfs:label "Graffiti" ;
+  owl:sameAs aat:300410270 .
+
+bnksy:Banksy
+  rdf:type bibo:Agent ;
+  rdfs:label "Banksy" .
+
+bnksy:UnitedKingdom
+  rdf:type bibo:Place ;
+  rdfs:label "United Kingdom" ;
+  owl:sameAs dbpedia:United_Kingdom .
+
+bnksy:Century
+  rdf:type bibo:Organization ;
+  rdfs:label "Century" ;
+  owl:sameAs viaf:127849436 ;
+  bibo:imprint bnksy:RandomHouseGroup .
+
+bnksy:RandomHouseGroup
+  rdf:type bibo:Organization ;
+  rdfs:label "Random House Group" ;
+  owl:sameAs viaf:153153594 ;
+  bibo:foundingDate "1927"^^xsd:gYear ;
+  bibo:location bnksy:NewYorkUSA .
+
+bnksy:NewYorkUSA
+  rdf:type bibo:Place ;
+  rdfs:label "New York, USA" ;
+  owl:sameAs dbpedia:New_York_City .

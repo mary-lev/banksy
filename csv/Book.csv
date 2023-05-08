@@ -1,0 +1,13 @@
+Subject,Predicate,Object
+Wall and Piece,Marc21:336-Content_Type,Book
+Wall and Piece,Marc21:020-International_Standard_Book_Number,1844137864
+Wall and Piece,Marc21:041-Language_Code,English
+Wall and Piece,Marc21:100-Main_Entry-Personal_Name,Banksy
+Wall and Piece,Marc21:260-Publication_Distribution_Etc.,United Kingdom
+Wall and Piece,Marc21:362-Dates_Of_Publication_And/or_Subsequent_Designation,2005
+Wall and Piece,Marc21:710-Added_Entry-Corporate_Name,Century
+Century,Rdf:label,Random House Group
+Wall and Piece,dcterms: title,Wall and Piece
+Random House Group,Rdf:type,Publisher
+Random House Group,Schema:dateCreated,1927
+Random House Group,Schema:location,"New York, USA"

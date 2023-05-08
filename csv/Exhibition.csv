@@ -1,0 +1,31 @@
+Ex:Exhibition,crm:P102_has_title,"Jago, Banksy, TVboy e altre storie controcorrente"
+Ex:Exhibition,rdf:type,crm:E5_Event
+Ex:Exhibition,crm:P7_took_place_at,ex:ExhibitionVenue
+Ex:Exhibition,crm:P4_has_time-span,ex:ExhibitionTimeSpan
+Ex:Exhibition,crm:P129_is_about,Non-conventional art
+Ex:Exhibition,crm:P14_carried_out_by,"ex:Artemisia, ex:PopHouse, ex:CuratorPiernicolaMariaDiIorio"
+ex:ExhibitionTimeSpan,rdf:type,crm:E52_Time-Span
+ex:ExhibitionTimeSpan,crm:P82a_begin_of_the_begin,Nov 11 2022
+ex:ExhibitionTimeSpan,crm:P82b_end_of_the_end,May 7 2023
+ex:ExhibitionVenue,rdf:type,crm:E53_Place
+ex:ExhibitionVenue,rdfs:label,Palazzo Albergati
+ex:ExhibitionVenue,crm:P87_is_identified_by,"ex:ExhibitionVenueName, ex:ExhibitionVenueAddress"
+ex:ExhibitionVenue,geo:lat,44.48991
+ex:ExhibitionVenue,geo:long,11.33439
+ex:ExhibitionVenue,crm:P89_falls_within,ex:Bologna
+ex:ExhibitionVenueName,rdf:type,crm:E44_Place_Appellation
+ex:ExhibitionVenueName,rdfs:label,Palazzo Albergati
+ex:ExhibitionVenueAddress,rdf:type,crm:E45_Address
+ex:ExhibitionVenueAddress,rdfs:label,"via Saragozza 26-28, Bologna, Italy"
+ex:Artemisia,rdf:type,crm:E39_Actor
+ex:Artemisia,rdfs:label,Artemisia
+ex:PopHouse,rdf:type,crm:E39_Actor
+ex:PopHouse,rdfs:label,Pop House Gallery
+ex:CuratorPiernicolaMariaDiIorio,rdf:type,crm:E39_Actor
+ex:CuratorPiernicolaMariaDiIorio,rdfs:label,Piernicola Maria Di Iorio
+ex:CuratorPiernicolaMariaDiIorio,crm:P2_has_type,ex:CuratorRole 
+ex:Bologna,rdf:type,crm:E53_Place
+ex:Bologna,rdfs:label,Bologna
+ex:Bologna,crm:P89_falls_within,ex:Italy
+ex:Italy,rdf:type,crm:E53_Place
+ex:Italy,rdfs:label,Italy

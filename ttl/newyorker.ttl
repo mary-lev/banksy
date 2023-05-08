@@ -1,0 +1,44 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <http://schema.org/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix viaf: <http://viaf.org/viaf/>.
+@prefix bnksy: <https://w3id.org/banskyproject/> .
+
+bnksy:Article
+  rdf:type crm:E31_Document ;
+  schema:category "Article" ;
+  schema:datePublished "2007-05-07"^^xsd:date ;
+  schema:publisher bnksy:TheNewYorker ;
+  schema:inLanguage "English" ;
+  schema:author bnksy:LaurenCollins ;
+  schema:about bnksy:AnonymityAndCriticism, bnksy:Banksy, bnksy:Mural .
+
+bnksy:TheNewYorker
+  rdf:type schema:Organization ;
+  rdfs:label "The New Yorker" ;
+  owl:sameAs viaf:261263929 .
+
+bnksy:LaurenCollins
+  rdf:type schema:Person ;
+  rdfs:label "Lauren Collins" .
+
+bnksy:AnonymityAndCriticism
+  rdf:type schema:Thing ;
+  rdfs:label "Anonymity and criticism" .
+
+bnksy:Banksy
+  rdf:type crm:E39_Actor ;
+  rdfs:label	"Banksy" ;
+  crm:P131_is_identified_by	bnksy:BanksyName ;
+  owl:sameAs viaf:51384525 .
+
+bnksy:Mural
+  rdfs:label	bnksy:GirlWithBalloonTitle1, bnksy:GirlWithBalloonTitle2 ;
+  rdf:type	crm:E22_Man-Made_Object ;
+  crm:P53_has_former_or_current_location	bnksy:MuralLocation ;
+  crm:P129_is_about	bnksy:MuralTopic ;
+  crm:P14_carried_out_by bnksy:Banksy ;
+  crm:P108i_was_produced_by	bnksy:MuralProduction .

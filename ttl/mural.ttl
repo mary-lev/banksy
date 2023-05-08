@@ -1,0 +1,74 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix aat: <http://vocab.getty.edu/page/aat/> .
+@prefix viaf: <http://viaf.org/viaf/>.
+@prefix bnksy: <https://w3id.org/banskyproject/> .
+
+bnksy:Mural
+  rdfs:label	bnksy:GirlWithBalloonTitle1, bnksy:GirlWithBalloonTitle2 ;
+  rdf:type	crm:E22_Man-Made_Object ;
+  crm:P53_has_former_or_current_location	bnksy:MuralLocation ;
+  crm:P129_is_about	bnksy:MuralTopic ;
+  crm:P14_carried_out_by bnksy:Banksy ;
+  crm:P108i_was_produced_by	bnksy:MuralProduction .
+
+bnksy:MuralLocation
+  rdf:type	crm:E53_Place ;
+  geo:lat	51.5086 ;
+  geo:long	-0.1169 ;
+  crm:P87_is_identified_by	bnksy:MuralLocationName, bnksy:MuralLocationAddress .
+
+bnksy:MuralProduction
+  rdf:type	crm:E12_Production ;
+  crm:P14_carried_out_by	bnksy:Banksy ;
+  crm:P33_used_specific_technique	bnksy:StencilStreetArt ;
+  crm:P4_has_time-span	bnksy:MuralTimeSpan ;
+  crm:P32_used_general_technique	aat:300056477 .
+
+bnksy:StencilStreetArt
+  rdf:type	crm:E29_Design_or_Procedure ;
+  rdfs:label	"Stencil Street Art" .
+
+bnksy:Banksy
+  rdf:type crm:E39_Actor ;
+  rdfs:label	"Banksy" ;
+  crm:P131_is_identified_by	bnksy:BanksyName ;
+  owl:sameAs viaf:51384525 .
+
+bnksy:BanksyName
+  rdf:type	crm:E82_Actor_Appellation ;
+  rdfs:label	"Banksy" ;
+  crm:P2_has_type	bnksy:BanksyNameType .
+
+bnksy:MuralLocationName
+  rdf:type	crm:E44_Place_Appellation ;
+  rdfs:label	"Waterloo Bridge" .
+
+bnksy:MuralLocationAddress
+  rdf:type	crm:E45_Address ;
+  rdf:label	"London, UK" .
+
+bnksy:MuralTimeSpan
+  rdf:type	crm:E52_Time-Span ;
+  crm:P82a_begin_of_the_begin	"2002"^^xsd:gYear ;
+  crm:P82b_end_of_the_end	"2008"^^xsd:gYear .
+
+bnksy:GirlWithBalloonTitle1
+  rdf:type	crm:E35_Title ;
+  rdfs:label	"Girl with Balloon" .
+
+bnksy:GirlWithBalloonTitle2	
+  rdf:type	crm:E35_Title ;
+  rdfs:label	"There is Always Hope" .
+
+bnksy:MuralTopic
+  rdf:type	crm:E89_Propositional_Object ;
+  rdfs:label	"Hope" .
+
+bnksy:BanksyNameType
+  rdf:type	crm:E55_Type ;
+  rdfs:label	"Pseudonym" .

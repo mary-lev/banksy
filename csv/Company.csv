@@ -1,0 +1,6 @@
+Subject,Predicate,Object
+Private limited Company,Schema:category  ,Private limited Company
+Private limited Company,Schema:dateCreated,"January 14, 2008"
+Private limited Company,Schema:knowsAbout,copyright for Banksy's art objects
+Private limited Company,Schema:locationCreated,"London, United Kingdom"
+Private limited Company,dcterms: title,Pest Control Office

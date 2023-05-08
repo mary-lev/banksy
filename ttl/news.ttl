@@ -1,0 +1,60 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <http://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix aat: <http://vocab.getty.edu/page/aat/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix viaf: <http://viaf.org/viaf/>.
+@prefix bnksy: <https://w3id.org/banskyproject/> .
+
+bnksy:Article
+  rdf:type schema:Article ;
+  dcterms:creator bnksy:ChelseaWhite ;
+  dcterms:isPartOf bnksy:MailOnline ;
+  dcterms:created "2014-03-14"^^xsd:date ;
+  dcterms:about bnksy:JustinBieber ;
+  dcterms:about bnksy:Banksy ;
+  dcterms:language "English" .
+
+bnksy:ChelseaWhite
+  rdf:type schema:Person ;
+  rdfs:label "Chelsea White" .
+
+bnksy:MailOnline
+  rdf:type schema:WebSite ;
+  rdfs:label "MailOnline" .
+
+bnksy:JustinBieber
+  rdf:type schema:Person ;
+  schema:name "Justin Bieber" ;
+  schema:jobTitle "Singer" ;
+  schema:owns bnksy:Tattoo ;
+  owl:sameAs viaf:103075654 .
+
+bnksy:Banksy
+  rdf:type crm:E39_Actor ;
+  rdfs:label	"Banksy" ;
+  crm:P131_is_identified_by	bnksy:BanksyName ;
+  owl:sameAs viaf:51384525 .
+
+bnksy:Tattoo
+  rdf:type schema:VisualArtwork ;
+  crm:P130_shows_features_of bnksy:Mural ;
+  dcterms:creator bnksy:GlenHartless ;
+  dcterms:created "2014-03-12"^^xsd:date ;
+  schema:additionalType "Controversial" .
+
+bnksy:Mural
+  rdfs:label	bnksy:GirlWithBalloonTitle1, bnksy:GirlWithBalloonTitle2 ;
+  rdf:type	crm:E22_Man-Made_Object ;
+  crm:P53_has_former_or_current_location	bnksy:MuralLocation ;
+  crm:P129_is_about	bnksy:MuralTopic ;
+  crm:P14_carried_out_by bnksy:Banksy ;
+  crm:P108i_was_produced_by	bnksy:MuralProduction .
+
+bnksy:GlenHartless
+  rdf:type schema:Person ;
+  schema:name "Glen Hartless" ;
+  schema:jobTitle "Tattooist" .

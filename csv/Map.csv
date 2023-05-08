@@ -1,0 +1,5 @@
+subject,predicate,object
+map,dcterms:ispartof,schema:VirtualLocation
+map,Schema:category,Schema: WebPage
+map,kml:TimeStamp,11 April 2023
+map,dcterms:about,crm: E21 Person

@@ -1,0 +1,39 @@
+ex:Mural,rdfs:label,"ex:Title1, ex:Title2"
+ex:Mural,rdf:type,crm:E22_Man-Made_Object
+ex:Mural,crm:P53_has_former_or_current_location,ex:MuralLocation
+ex:Mural,crm:P129_is_about,ex:MuralTopic
+ex:Mural,crm:P14_carried_out_by,viaf:51384525
+ex:Mural,crm:P108i_was_produced_by,ex:MuralProduction
+ex:MuralLocation,rdf:type,crm:E53_Place
+ex:MuralLocation,geo:lat,51.5086
+ex:MuralLocation,geo:long,-0.1169
+ex:MuralLocation,crm:P87_is_identified_by,"ex:MuralLocationName, ex:MuralLocationAddress"
+ex:MuralProduction,rdf:type,crm:E12_Production
+ex:MuralProduction,crm:P14_carried_out_by,ex:Banksy
+ex:MuralProduction,crm:P33_used_specific_technique,ex:StencilStreetArt
+ex:MuralProduction,crm:P4_has_time-span,ex:MuralTimeSpan
+ex:MuralProduction,crm:P14_carried_out_by viaf,51384525
+ex:MuralProduction,crm:P32_used_general_technique,aat:300056477
+ex:StencilStreetArt,rdf:type,crm:E29_Design_or_Procedure
+ex:StencilStreetArt,rdfs:label,"""Stencil Street Art"""
+ex:Banksy,rdf:type,crm:E39_Actor
+ex:Banksy,rdfs:label,"""Banksy"""
+ex:Banksy,crm:P131_is_identified_by,ex:BanksyName
+ex:BanksyName,rdf:type,crm:E82_Actor_Appellation 
+ex:BanksyName,rdfs:label,"""Banksy"""
+ex:BanksyName,crm:P2_has_type,ex:BanksyNameType
+ex:MuralLocationName,rdf:type,crm:E44_Place_Appellation
+ex:MuralLocationName,rdfs:label,Waterloo Bridge
+ex:MuralLocationAddress,rdf:type,crm:E45_Address
+ex:MuralLocationAddress,rdf:label,"London, UK"
+ex:MuralTimeSpan,rdf:type,crm:E52_Time-Span
+ex:MuralTimeSpan,crm:P82a_begin_of_the_begin,2002
+ex:MuralTimeSpan,crm:P82b_end_of_the_end,2008
+ex:Title1,rdf:type,crm:E35_Title
+ex:Title1,rdfs:label,"""Girl with Balloon"""
+ex:Title2,rdf:type,crm:E35_Title
+ex:Title2,rdfs:label,"""There is Always Hope"""
+ex:MuralTopic,rdf:type,crm:E89_Propositional_Object
+ex:MuralTopic,rdfs:label,"""Hope"""
+ex:BanksyNameType,rdf:type,crm:E55_Type
+ex:BanksyNameType,rdfs:label,"""Pseudonym"""

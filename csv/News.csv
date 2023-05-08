@@ -1,0 +1,15 @@
+Subject,Predicate,Object
+Article,rdf:type,Article
+Article,dcterms:Creator,Chelsea White
+Article,dcterms:ispartof,MailOnline
+Article,dcterms:created,"March 14, 2014"
+Article,dcterms:about,Justin Bieber
+Article,dcterms:about,Banksy
+Justin Bieber,schema:owns,Tattoo
+Tattoo,crm:P130_shows_features_of,"Girl with Balloon, There is Always Hope"
+Tattoo,Dcterms:creator ,Glen Hartless
+Justin Bieber,rdf:type,Singer
+Glen Hartless,rdf:type,Tattooist
+Tattoo,Dcterms:created,12 March 2014
+Tattoo,Schema:additionalType,Controversial
+Article,dcterms:language,English
