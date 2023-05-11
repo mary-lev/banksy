@@ -1,17 +1,18 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix schema: <http://schema.org/> .
-@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
-@prefix bibo: <http://purl.org/ontology/bibo/> .
-@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
-@prefix aat: <http://vocab.getty.edu/page/aat/> .
-@prefix dbpedia: <http://dbpedia.org/resource/> .
-@prefix viaf: <http://viaf.org/viaf/>.
-@prefix kml: <http://www.opengis.net/kml/2.2#> .
-@prefix bnksy: <https://w3id.org/banskyproject/> .
+@prefix rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# .
+@prefix rdfs: http://www.w3.org/2000/01/rdf-schema# .
+@prefix owl: http://www.w3.org/2002/07/owl# .
+@prefix xsd: http://www.w3.org/2001/XMLSchema# .
+@prefix schema: http://schema.org/ .
+@prefix crm: http://www.cidoc-crm.org/cidoc-crm/ .
+@prefix bibo: http://purl.org/ontology/bibo/ .
+@prefix dcterms: http://purl.org/dc/terms/ .
+@prefix geo: http://www.w3.org/2003/01/geo/wgs84_pos# .
+@prefix aat: http://vocab.getty.edu/page/aat/ .
+@prefix kml: http://www.opengis.net/kml/2.2# .
+@prefix dbpedia: http://dbpedia.org/resource/ .
+@prefix viaf: http://viaf.org/viaf/.
+@prefix bnksy: https://w3id.org/banskyproject/ .
+
 
 bnksy:Mural
   rdfs:label	bnksy:GirlWithBalloonTitle1, bnksy:GirlWithBalloonTitle2 ;

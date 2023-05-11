@@ -17,6 +17,8 @@ The Banksy LOD Project is structured into several layers:
 1. Conceptual Map: A visual representation of the data and relationships derived from the chosen items related to Banksy's art and influence.
 2. Entity-Relationship Model: A structured and systematic representation of the information and associations present within the conceptual map.
 3. Metadata Alignment: Aligning the metadata from diverse sources to facilitate a comprehensive and unified understanding of the information.
+4. RDF description
+5. RDF visualisation
 
 ## Data Sources
 
